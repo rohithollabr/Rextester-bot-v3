@@ -1,0 +1,23 @@
+{
+  "name": "rextester-bot",
+  "version": "3.0.0-alpha1",
+  "description": "Telegram bot for executing snippets of code.",
+  "dependencies": {
+    "micro-bot": "^2.2.0",
+    "node-fetch": "^1.7.3",
+    "ramda": "^0.25.0",
+    "xregexp": "^3.2.0"
+  },
+  "scripts": {
+    "debug": "env NODE_ENV=development node --trace-warnings --inspect node_modules/micro-bot/bin/micro-bot",
+    "now-start": "micro-bot -d ${NOW_URL}",
+    "start": "micro-bot"
+  },
+  "private": true,
+  "author": "GingerPlusPlus <woj.pawlik@gmail.com>",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GingerPlusPlus/Rextester-bot-v3.git"
+  }
+}

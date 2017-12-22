@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "micro-bot",
+            "runtimeArgs": [
+                "--trace-warnings",
+                "--inspect-brk=5858",
+                "${workspaceFolder}/node_modules/micro-bot/bin/micro-bot"
+            ],
+            "port": 5858
+        }
+    ]
+}
