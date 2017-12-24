@@ -6,6 +6,7 @@ const paths = [
     './standalone',
     './exec-url',
     './help',
+    './langs',
     './main',
     './unmatched',
 ];

@@ -1,7 +1,14 @@
 'use strict';
 
+const R = require('ramda');
+
 // @ts-ignore
 const langs = require('./langs.json');
+
+const langsList = R.pipe(
+    R.invertObj,
+    R.values,
+)(langs);
 
 // @ts-ignore
 const CompilerArgs = require('./compiler-args.json');
@@ -28,6 +35,10 @@ class RextesterExecutor {
         } else {
             return [];
         }
+    }
+
+    listLangs() {
+        return langsList;
     }
 
     /**
