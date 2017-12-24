@@ -13,6 +13,9 @@
                 "--inspect-brk=5858",
                 "${workspaceFolder}/node_modules/micro-bot/bin/micro-bot"
             ],
+            "env": {
+                "NODE_ENV": "development",
+            },
             "port": 5858
         }
     ]

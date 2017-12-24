@@ -31,7 +31,7 @@ const anchors = /^\^|\$$/g;
 
 const processInterpolation = v =>
     XRegExp.isRegExp(v)
-        ? v.source.replace(anchors, '')
+        ? nonCapturingGroup(v.source.replace(anchors, ''))
         : nonCapturingGroup(XRegExp.escape(v));
 
 const regex = (flags) => (s, ...args) =>
