@@ -1,3 +1,5 @@
 'use strict';
 
-exports.botHandler = require('./handlers');
+const wrapHandler = require('./utils/context/wrap-handler');
+
+exports.botHandler = wrapHandler(require('./handlers'));
