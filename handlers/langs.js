@@ -32,4 +32,4 @@ const langsString = R.pipe(
 
 const handler = Tf.reply(`<pre>${langsString}</pre>`, { parse_mode: 'html' });
 
-module.exports = Tf.command([ 'langs', 'languages' ], handler);
+module.exports = Tf.command([ 'langs', 'languages', 'all_languages' ], handler);

@@ -1,6 +1,6 @@
 {
   "name": "rextester-bot",
-  "version": "3.0.0-alpha2",
+  "version": "3.0.0-alpha3",
   "description": "Telegram bot for executing snippets of code.",
   "dependencies": {
     "micro-bot": "^2.2.0",
