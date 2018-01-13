@@ -1,7 +1,6 @@
-// @ts-nocheck
 'use strict';
 
-const SuperContext = require('./unbound-context');
+const SuperContext = require('telegraf/core/context');
 
 
 class ContextHandlingEdits extends SuperContext {
