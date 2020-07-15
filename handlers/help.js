@@ -1,6 +1,6 @@
 'use strict';
 
-const Tf = require('micro-bot');
+const Tf = require('telegraf').Composer;
 
 // @ts-ignore
 const pkg = require('../package.json');
@@ -34,4 +34,5 @@ const helpHandler = ctx => {
     return ctx.replyWithMarkdown(helpText(ctx), { reply_markup });
 };
 
+// @ts-ignore
 module.exports = Tf.command([ 'help', 'start' ], helpHandler);

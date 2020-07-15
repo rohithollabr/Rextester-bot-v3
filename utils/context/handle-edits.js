@@ -1,9 +1,9 @@
 'use strict';
 
-const SuperContext = require('telegraf/core/context');
+const { Context } = require('telegraf');
 
 
-class ContextHandlingEdits extends SuperContext {
+class ContextHandlingEdits extends Context {
     constructor(update, tg, options) {
         const message = update.message || update.edited_message;
         const { update_id } = update;

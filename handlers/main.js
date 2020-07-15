@@ -1,15 +1,15 @@
 'use strict';
 
 const R = require('ramda');
+const XRegExp = require('xregexp');
 
 const executor = require('../executor');
 
-const stringUtils = require('../utils/string');
 const { languageRegex, displayError, format } = require('../utils/misc');
 const { commandRegex } = require('../utils/telegraf');
 
 
-const regex = stringUtils.regex('six') `^/
+const regex = XRegExp.tag('six') `^/
     (?<lang> ${languageRegex})
     (?<username> @\w+)?
     \s+
@@ -31,7 +31,7 @@ const handler = async (ctx, next) => {
     if (langIds.length === 0) {
         return ctx.chat.type === 'private'
             ? ctx.reply(`Unknown language: ${lang}`)
-            : null
+            : null;
     }
 
     ctx.replyWithChatAction('typing');

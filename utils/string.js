@@ -1,7 +1,6 @@
 'use strict';
 
 const R = require('ramda');
-const XRegExp = require('xregexp');
 
 
 const escapeHtml = R.pipe(
@@ -25,22 +24,9 @@ const simpleEscape = esc => (as, ...subs) => tag(as, ...subs.map(esc));
 // Similar to https://www.npmjs.com/package/html-template-tag
 const html = simpleEscape(R.pipe(String, escapeHtml));
 
-const nonCapturingGroup = (content = '') => `(?:${content})`;
-
-const anchors = /^\^|\$$/g;
-
-const processInterpolation = v =>
-    XRegExp.isRegExp(v)
-        ? nonCapturingGroup(v.source.replace(anchors, ''))
-        : nonCapturingGroup(XRegExp.escape(v));
-
-const regex = (flags) => (s, ...args) =>
-    XRegExp(String.raw(s, ...args.map(processInterpolation)), flags);
-
 module.exports = {
     escapeHtml,
     html,
-    regex,
     simpleEscape,
     tag,
 };

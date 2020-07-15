@@ -1,6 +1,6 @@
 'use strict';
 
-const Tf = require('micro-bot');
+const Tf = require('telegraf').Composer;
 
 const paths = [
     './common_langs',

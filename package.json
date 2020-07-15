@@ -3,21 +3,19 @@
   "version": "3.0.0-alpha3",
   "description": "Telegram bot for executing snippets of code.",
   "dependencies": {
-    "micro-bot": "^2.2.0",
-    "node-fetch": "^1.7.3",
-    "ramda": "^0.25.0",
-    "xregexp": "^3.2.0"
+    "node-fetch": "^2.6.0",
+    "ramda": "^0.27.0",
+    "telegraf": "^3.38.0",
+    "xregexp": "^4.3.0"
   },
   "scripts": {
-    "debug": "env NODE_ENV=development node --trace-warnings --inspect node_modules/micro-bot/bin/micro-bot",
-    "now-start": "micro-bot -d ${NOW_URL}",
-    "start": "micro-bot"
+    "start": "telegraf"
   },
   "private": true,
-  "author": "GingerPlusPlus <woj.pawlik@gmail.com>",
+  "author": "Wojciech Pawlik <woj.pawlik@gmail.com>",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GingerPlusPlus/Rextester-bot-v3.git"
+    "url": "https://github.com/wojpawlik/Rextester-bot-v3.git"
   }
 }

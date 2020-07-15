@@ -1,6 +1,7 @@
 'use strict';
 
-const { command, reply } = require('micro-bot');
+// @ts-ignore
+const { command, reply } = require('telegraf').Composer;
 
 const prependLangPrefix = s => `/${s}`;
 
@@ -25,6 +26,6 @@ ${mostCommonLangs.map(prependLangPrefix).join('\n')}
 See /all_languages.
 `;
 
-const handler = reply(replyString, { parse_mode: 'html' });
+const handler = reply(replyString, { parse_mode: 'HTML' });
 
 module.exports = command('common_languages', handler);

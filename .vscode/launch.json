@@ -7,11 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "micro-bot",
+            "name": "telegraf",
             "runtimeArgs": [
                 "--trace-warnings",
                 "--inspect-brk=5858",
-                "${workspaceFolder}/node_modules/micro-bot/bin/micro-bot"
+                "${workspaceFolder}/node_modules/telegraf/bin/telegraf",
             ],
             "env": {
                 "NODE_ENV": "development",

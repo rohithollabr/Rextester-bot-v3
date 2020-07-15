@@ -1,7 +1,7 @@
 'use strict';
 
 const R = require('ramda');
-const Tf = require('micro-bot');
+const Tf = require('telegraf').Composer;
 
 module.exports = Tf.optional(
     R.pathEq([ 'chat', 'type' ], 'private'),

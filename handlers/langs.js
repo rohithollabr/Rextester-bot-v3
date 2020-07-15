@@ -1,7 +1,7 @@
 'use strict';
 
 const R = require('ramda');
-const Tf = require('micro-bot');
+const Tf = require('telegraf').Composer;
 
 const executor = require('../executor');
 
@@ -30,6 +30,7 @@ const langsString = R.pipe(
 )(langsList);
 
 
-const handler = Tf.reply(`<pre>${langsString}</pre>`, { parse_mode: 'html' });
+const handler = Tf.reply(`<pre>${langsString}</pre>`, { parse_mode: 'HTML' });
 
+// @ts-ignore
 module.exports = Tf.command([ 'langs', 'languages', 'all_languages' ], handler);
