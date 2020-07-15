@@ -8,8 +8,6 @@ const stringUtils = require('../utils/string');
 const { languageRegex, displayError, format } = require('../utils/misc');
 const { commandRegex } = require('../utils/telegraf');
 
-const { standalone } = require('../symbols');
-
 
 const regex = stringUtils.regex('six') `^/
     (?<lang> ${languageRegex})
@@ -31,11 +29,9 @@ const handler = async (ctx, next) => {
     const langIds = await executor.resolveLang(lang);
 
     if (langIds.length === 0) {
-        return ctx[standalone]
-            ? ctx.chat.type === 'private'
-                ? ctx.reply(`Unknown language: ${lang}`)
-                : null
-            : next();
+        return ctx.chat.type === 'private'
+            ? ctx.reply(`Unknown language: ${lang}`)
+            : null
     }
 
     ctx.replyWithChatAction('typing');
