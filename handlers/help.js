@@ -18,6 +18,7 @@ See list of supported programming languages:
 /common\\_languages, /all\\_languages.
 
 Version: \`${pkg.version}\`.
+powered by @code2340.
 `;
 
 const helpHandler = ctx => {
