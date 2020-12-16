@@ -18,15 +18,14 @@ See list of supported programming languages:
 /common\\_languages, /all\\_languages.
 
 Version: \`${pkg.version}\`.
-Powered by rextester.com.
 `;
 
 const helpHandler = ctx => {
     const inline_keyboard = [ [
         // XXX use pkg.bugs.url instead?
-        { text: "Official group", url: "telegram.me/Rextesters" },
-        { text: "Repository", url: pkg.repository.url },
-        { text: "Rate", url: `https://telegram.me/storebot?start=${ctx.me}` },
+        { text: "Official group", url: "https://t.me/code2340" },
+        { text: "Repository locked", url: pkg.reposy.url },
+        { text: "Rate", url: `https://telegram.me/storebot?start=${me}` },
     ] ];
 
     const reply_markup = { inline_keyboard };
