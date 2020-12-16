@@ -23,9 +23,9 @@ Version: \`${pkg.version}\`.
 const helpHandler = ctx => {
     const inline_keyboard = [ [
         // XXX use pkg.bugs.url instead?
-        { text: "Official group", url: "https://t.me/code2340" },
-        { text: "Repository locked", url: pkg.reposy.url },
-        { text: "Rate", url: `https://telegram.me/storebot?start=${me}` },
+        { text: "Official group", url: "telegram.me/code2340" },
+        { text: "Repository", url: "telegram.me/code2340" },
+        { text: "Rate", url: `https://telegram.me/storebot?start=${s.me}` },
     ] ];
 
     const reply_markup = { inline_keyboard };
